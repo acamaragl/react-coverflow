@@ -1,14 +1,14 @@
-### Looking for someone to take over the project as I've recently changes jobs and had a child and am no longer capable of supporting this dependency. If anyone is interested, please feel free to take ownership of it
+### NOT MAINTAINED! Forked from http://andyyou.github.io/react-coverflow/
 
 React Coverflow
 ===
-[![npm version](https://badge.fury.io/js/react-coverflow.svg)](http://badge.fury.io/js/react-coverflow)
+[![npm version](https://badge.fury.io/js/react-coverflow-ac.svg)](http://badge.fury.io/js/react-coverflow-ac)
 
-[![NPM](https://nodei.co/npm/react-coverflow.png)](https://nodei.co/npm/react-coverflow/)
+[![NPM](https://nodei.co/npm/react-coverflow-ac.png)](https://nodei.co/npm/react-coverflow-ac/)
 
 ---
 
-![](https://raw.githubusercontent.com/andyyou/react-coverflow/gh-pages/images/preview.png)
+![](https://raw.githubusercontent.com/acamaragl/react-coverflow/gh-pages/images/preview.png)
 
 React Coverflow is a React component for building cover flow style carousel in a convenient way.
 
@@ -22,10 +22,10 @@ Features of `react-coverflow`
 
 ## Getting started
 
-Install `react-coverflow` using npm.
+Install `react-coverflow-ac` using npm.
 
 ```
-$ npm install react-coverflow
+$ npm install react-coverflow-ac
 ```
 
 The required stylesheet using `css-module` and include in package(js file), so you don't need include other stylesheet.
@@ -168,6 +168,8 @@ $ npm publish
 ```
 
 ## Release History
+* 2022-04-22
+  - Removed dependencies and avoid errors when nodeRef.current is null
 * 2019-04-13
   - Removed button navigation for arrow navigation. Using arrow navigation now disables the image-click navigation that had previously existed.
 * 2018-03-04

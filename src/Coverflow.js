@@ -9,6 +9,11 @@ import PropTypes from 'prop-types';
 import Radium, { StyleRoot } from 'radium';
 import styles from './stylesheets/coverflow.scss';
 
+const STD_DIMENSIONS = {
+  width:500,
+  height:500
+}
+
 const TOUCH = {
   move: false,
   lastX: 0,
@@ -120,10 +125,13 @@ class Coverflow extends Component {
     const { displayQuantityOfSide } = this.props;
     const length = React.Children.count(this.props.children);
     const center = this._center();
+    const node = this.refNode;
     let state = {
-      width: this.refNode.current.offsetWidth,
-      height: this.refNode.current.offsetHeight,
-    };
+          width: node && node.current ? node.current.offsetWidth : STD_DIMENSIONS.width,
+          height: node && node.current ? node.current.offsetHeight : STD_DIMENSIONS.height
+        };
+
+
     const baseWidth = state.width / (displayQuantityOfSide * 2 + 1);
     let activeImg = typeof active === 'number' ? active : this.props.active;
     if (typeof active === 'number' && ~~active < length) {
